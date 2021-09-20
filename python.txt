@@ -1,0 +1,794 @@
+
+
+python codes
+
+String="""Hakka and Bukka were brothers and warriors. The brothers wanted to build their own kingdom where people 
+could live without fear. They collected a band of young men and trained them in warfare. They lived in a forest 
+hideout on the banks of the river Tungabhadra in South India. One day, the brothers were out on a hunt. Ferocious 
+dogs accompanied them. They crossed the river and rode on. A couple of frightened rabbits ran out of the bushes. The 
+dogs gave them chase with the two brothers closely behind on their horses. It was a long chase. The rabbits were 
+running for their life. The dogs were catching up. Suddenly, in a swift move, the rabbits turned and faced the dogs. 
+Taken aback by the show of defiance, the barking dogs stepped back. Hakka called back the dogs. As the dogs turned 
+back, the rabbits walked away. Hakka looked around. They were on the other side of the Tungabhadra. It was a rocky 
+land. The sun was blazing in the sky. "Strange! I’ve never seen rabbits challenging dogs before! " said Bukka. 
+"That’s the quality of this land, " said a quiet voice,  "Even rabbits give fight. " Startled to hear a stranger 
+speak, the two brothers turned. They saw a holy man walking towards them. He was a picture of peace. At the same 
+time, his eyes were blazing bright. """
+
+# 1)Length of string
+k=len(String)
+print(k)
+
+# 2)Number of words
+count=0
+for i in String:
+    if(i!=' '):
+        count+=1
+print(count)
+
+# 3)Max Occurance
+dict={}
+for i in String:
+    if(i!=' '):
+        if(i not in dict):
+            dict[i]=1
+        else:
+            dict[i]+=1
+k=max(dict.values())
+for keys,values in dict.items():
+    if(values==k):
+        print(keys)
+
+
+# 4)Max Occurance word
+dict={}
+li=list(String.split(" "))
+for i in li:
+    if(i not in dict):
+        dict[i]=1
+    else:
+        dict[i]+=1
+k=max(dict.values())
+for keys,values in dict.items():
+    if(values==k):
+        print(keys)
+
+#  5) Repeated word's count
+dict={}
+li=list(String.split(" "))
+for i in li:
+     if(i not in dict):
+         dict[i]=1
+     else:
+         dict[i]+=1
+for keys,values in dict.items():
+    if(values>1 and keys!=" "):
+        print(keys,values,end=" ")
+
+
+# 6) Repeated word's list
+dict={}
+li=list(String.split(" "))
+for i in li:
+    if(i not in dict):
+        dict[i]=1
+    else:
+        dict[i]+=1
+for keys,values in dict.items():
+    if(values>1):
+        print(keys,end="    ")
+
+-----------------
+
+# 1. Write a Python function that takes a list and returns a new list with unique elements of the first list.
+# Without using set
+# def fun(list):
+#     l1 = []
+#     for i in list:
+#         if(i in l1):
+#             continue
+#         else:
+#             l1.append(i)
+#     return l1
+# list=[1,2,3,4,3,4,2,3,4]
+#
+# list1=fun(list)
+# print(list1)
+
+# 2) Write a Python function to check whether a string is a pangram or not.
+# def pangram(string):
+#     str="abcdefghijklmnopqrstuvwxyz"
+#     for i in str:
+#         if i not in string:
+#             return False
+#     return True
+# string="the quick brown fox jumps over the lazy dog"
+# val=pangram(string)
+# print(val)
+
+
+# 3)Write a Python program that accepts a hyphen-separated sequence of words as input and prints the words in
+# a hyphen-separated sequence after sorting them alphabetically.
+# var='green-red-yellow-black-white'
+# li=list(var.split("-"))
+# li.sort()
+# print(li)
+
+---------------------------------------------------------------------------------------------------------------------------------
+1. 
+(a) How to find the maximum occurring character in given String.
+st="life is like a coin You can spend it any way you wish but you only spend it once"
+st1=' '
+l={}
+k=st.split(' ')
+for i in k:
+    st1=st1+i
+for i in st1:
+    if(i in l.keys()):
+        l[i]+=1
+    else:
+        l[i]=1
+m=max(l.values())
+print(l)
+for key,value in l.items():
+     if(l[key]==m):
+         print(key)
+op=i
+n
+-------------------
+b)find non repeated char in a string.
+st="life is like a coin You can spend it any way you wish but you only spend it once"
+st1=' '
+l={}
+k=st.split(' ')
+for i in k:
+    st1=st1+i
+for i in st1:
+    if(i in l.keys()):
+        l[i]+=1
+    else:
+        l[i]=1
+for key,value in l.items():
+     if(l[key]==1):
+         print(key,end=' ')
+
+op- f k Y h b 
+-------------------------
+(c) how to remove the duplicate character from String
+st="life is like a coin You can spend it any way you wish but you only spend it once"
+st1=' '
+l={}
+k=st.split(' ')
+for i in k:
+    st1=st1+i
+for i in st1:
+    if(i in l.keys()):
+        l[i]+=1
+    else:
+        l[i]=1
+for key,value in l.items():
+     if(l[key]>1):
+         print(key,end=' ')
+
+op-l i e s a c o n u p d t y w 
+------------------------------
+(d) How do you count a number of vowels and consonants in a given string
+st="life is like a coin You can spend it any way you wish but you only spend it once"
+st1=' '
+l={}
+k=st.split(' ')
+for i in k:
+    st1=st1+i
+for i in st1:
+    if(i in l.keys()):
+        l[i]+=1
+    else:
+        l[i]=1
+for key,value in l.items():
+     if(key in ['a','e','i','o','u']):
+         print(key,l[key])
+op-
+i 7
+e 5
+a 4
+o 6
+u 4
+
+----------------------------
+(e) length of string. (diff methods)
+st="life is like a coin You can spend it any way you wish but you only spend it once"
+k=st.split(' ')
+length=len(k)
+print(length)
+
+count=0
+for i in k:
+    count=count+1
+print(count)
+op-19
+19
+-----------------------------
+(f) String Reverse. (diff methods)
+st="life is like a coin You can spend it any way you wish but you only spend it once"
+print(st[::-1])
+
+op-ecno ti dneps ylno uoy tub hsiw uoy yaw yna ti dneps nac uoY nioc a ekil si efil
+-------------------------
+2) Write a program that asks the user to input n integers, and then prints the largest odd number that was entered. If no odd number was entered, 
+it should print a message to that effect.
+l=[]
+l1=[]
+for i in range(3):
+    k=int(input("enter 3 no."))
+    l.append(k)
+for i in l:
+    if(i%2!=0):
+      l1.append(i)
+print(max(l1))
+
+op-enter 3 no.3
+enter 3 no.4
+enter 3 no.5
+5
+-----------------------
+
+3. Write a program that asks the user to enter an integer and prints two integers, root and pwr, 
+such that 0 < pwr < 6 and root**pwr is equal to the 
+integer entered by the user. If no such pair of integers exists, it should print a message to that effect.
+
+x=int(input())
+k=math.sqrt(x)
+p=x*x
+if(p in range(1,6)):
+    z=int(math.pow(k,p))
+    if(z==x):
+        print("no. nd user no. are equal")
+    else:
+        print("not equal")
+
+op-
+2
+not equal
+----------------------------------
+4. Let s be a string that contains a sequence of decimal numbers separated by commas, e.g., s = '1.23,2.4,3.123'. Write a program that prints the sum of the
+ numbers in s.
+
+s=input()
+sum=0
+k=s.split(',')
+for i in k:
+    sum=sum+float(i)
+print('%.2f'%sum)
+
+op
+23.43,45.33
+68.76
+----------------------------------
+
+5. Write a program that accepts two strings as arguments and returns True if either string occurs anywhere in the other, and False otherwise. 
+with and without built-in str operation.
+
+def check(str1,str2):
+    if(str1.startswith(str2) or str1.endswith(str2)):
+        return True
+    else:
+        return False
+
+k=check('accenture','accent')
+print(k)
+
+
+def check(str1,str2):
+    if(str2 in str1):
+        return True
+    else:
+        return False
+
+k=check('accenture','accent')
+print(k)
+
+op
+True
+
+----------------------------------
+
+6. The volume of a sphere with radius r is 4/3pr3. What is the volume of a sphere with radius 5?
+pie=math.pi
+def rad(r):
+    ans=(4*pie*r*r*r)/3
+    return ans
+
+vol=rad(5)
+print('%.2f'%vol)
+
+op
+523.60
+------------------------------------
+
+7)Get first name and last name from user and print your full name. (try diff methods)
+fname=input()
+lname=input()
+str=""
+str=fname+' '+lname
+print(str)
+
+op
+sakshi saraswat
+
+------------------------------------
+***
+8. Get ur full name, age as input from user and print first name and last name , age using string slicing 
+a) 2 raw_input get name and age 
+n=input("enter name nd age")
+l=0
+for i in n:
+    k = 0
+    if(i==' '):
+        k=n.index(i)
+        print(k)
+        print(n[l:k])
+        l=k+1
+b) print first name and last name and age 
+c) WHEN age >= 18 , he/she is eligible to vote 
+d) WHEN age < 18 , he/she is not eligible to vote
+
+-------------------------------------
+9. Calculating your birth number in numerology 26/11/1978 2+6+1+1+1+7+8 = 8
+
+n=input("enter birthdate")
+k=n.split('/')
+sum=0
+cnt=0
+for i in k:
+    while(int(i)>0):
+        r=int(i)%10
+        sum=sum+r
+        z=int(i)/10
+        i=z
+while(sum>10):
+    s=sum%10
+    cnt=cnt+s
+    n=int(sum/10)
+    if(n<10):
+        cnt=cnt+n
+        break
+    elif(n<=0):
+        break
+    else:
+        sum=n
+print(cnt)
+
+op
+enter birthdate22/12/2003
+3
+
+-----------------------------------------
+10. Write a Python program to perform sum of three given integers. However, if any of the two values are equal then sum will be zero (eg : 2+1+1 = 0)
+l=[]
+sum=0
+for i in range(3):
+    n=int(input())
+    if(n in l):
+	sum=0
+        break
+    else:
+        l.append(n)
+        sum=sum+n
+print(sum)
+
+op
+2
+3
+6
+11
+------------------------------------------
+
+11. Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters. Suppose the following input is supplied 
+to the program. (with and without built-in function)
+Hello world! Then, the output should be: UPPER CASE 1 LOWER CASE 9
+
+k='Hello world'
+s=str(k.split(' '))
+ucnt=0
+lcnt=0
+for i in s:
+    if(i.isupper()):
+        ucnt=ucnt+1
+    elif(i.islower()):
+        lcnt=lcnt+1
+print(ucnt)
+print(lcnt)
+
+op
+1
+9
+------------------------------------------
+12. Write a python script to validate the strong password (combination of characters alphabets and numbers,special characters in it. if not weak password) 
+eg: Acc9876$ it is strong password abcd it is weak password.
+n=input("enter the password")
+cnt=0
+cnt1=0
+cnt2=0
+for i in n:
+    if(i in '0123456789'): 
+        cnt=cnt+1
+    elif(i in 'abcdefghijklmnopqrstuvwxyz'):
+        cnt1=cnt1+1
+    else:
+        cnt2=cnt2+1
+if(cnt>=1 and cnt1>=1 and cnt2>=1):
+    print("strong password")
+else:
+    print("weak password")
+
+op
+enter the passwordabc12@
+strong password
+------------------------------------------
+13. Please write a program which counts and prints the numbers of each character in a string input by console.
+Example: If the following string is given as input to the program:
+abcdefgabc
+Then, the output of the program should be:
+>>>	a,2
+	c,2
+	b,2
+	e,1
+	d,1
+	g,1
+	f,1
+Sample String : google.com'
+Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+(try both sample)
+
+n=input()
+dict={}
+for i in n:
+    if(i in dict.keys()):
+        dict[i]=dict[i]+1
+        dict.update({i: dict[i]})
+    else:
+        dict[i]=1
+        dict.update({i: dict[i]})
+print(dict)
+
+op
+hvhv
+{'h': 2, 'v': 2}
+-----------------------------------------
+14. Write a program that will ask the user for a number and then print out a list of number from 1 to the number entered and the square of the number. 
+For example, if the user entered '3' then the program would output:
+1 squared is 1. 2 squared is 4. 3 squared is 9.
+
+n=int(input())
+for i in range(1,n+1):
+    sqr=i*i
+    print(str(i)+" square is "+str(sqr))
+
+op
+3
+1 square is 1
+2 square is 4
+3 square is 9
+-----------------------------------------
+15. Create a program which asks the user for 3 numbers representing the year, month and day 
+e.g 1982 10 08 and then outputs in the form 8th October 1982
+
+n=input()
+k=n.split(' ')
+i=len(k)-1
+dict={1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',7:'Jul',8:'Aug',9:'Sep',10:'Oct',11:'Nov',12:'Dec'}
+while(i!=-1):
+    if(i==len(k)-1):
+        print(k[i]+'th',end=' ')
+        i-=1
+    elif(i==len(k)-2):
+        l=int(k[i])
+        print(dict[l],end=' ')
+        i-=1
+    else:
+        print(k[i])
+        i-=1
+
+op
+1999 10 09
+09th Oct 1999
+----------------------------------------
+16. (a) string palindrome
+def palindrome(val):
+    k=''.join(reversed(val))
+    if(k==val):
+        return True
+    else:
+        return False
+i=palindrome("122")
+if i:
+    print("palidrome")
+
+op
+palindrome
+
+(b) number palindrome.
+n=12321
+rev=0
+num=n
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=int(n/10)
+if(rev==num):
+    print("palindrome")
+
+op
+palindrome
+-------------------------------------------
+
+17. string anagram
+def pangram(string):
+    str="abcdefghijklmnopqrstuvwxyz"
+    for i in str:
+        if i not in string:
+            return False
+    return True
+string="the quick brown fox jumps over the lazy dog"
+val=pangram(string)
+print(val)
+
+op
+True
+
+-----------------------------------------
+18. (a) prime or not between range of numbers form user.
+n=int(input())
+k=int(input())
+for i in range(n,k+1):
+    cnt=0
+    if(i>1):
+        for z in range(2,i):
+            if(i%z==0):
+                cnt=1
+    if(cnt==0):
+        print(i)
+
+op-
+2
+9
+2 3 5 7 
+
+(b) get a number from user and validate prime or not.
+n=int(input())
+cnt = 0
+for i in range(1,n+1):
+    if(n%i==0):
+        cnt+=1
+if(cnt==2):
+    print("prime")
+else:
+    print("non prime")
+
+op
+8
+non prime
+----------------------------------
+
+19. (a) get input from user and validate even or odd.
+n=int(input())
+if(n%2==0):
+    print("even")
+else:
+    print("odd")
+
+op
+5
+odd
+
+(b) Sum of even and odd number between a range. get the range from user.
+a=int(input())
+b=int(input())
+even=0
+odd=0
+for i in range(a,b+1):
+    if(i%2==0):
+        even=even+i
+    else:
+        odd=odd+1
+print("even= "+str(even))
+print("odd= "+str(odd))
+
+op-
+2
+9
+even= 20
+odd= 4
+------------------------------------------
+
+20. Leap year or not.
+yr=int(input())
+if(yr%4==0 and yr%100!=0):
+    print("leap year")
+else:
+    print("not leap year"
+
+op
+
+1700
+not leap year
+------------------------------------------
+
+21 Python comments multiline & single. (see how to use and print doc string)
+by using #
+--------------------------------------------
+22. Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+n=int(input())
+l=[]
+max=0
+for i in range(n):
+    k=input()
+    l.append(k)
+for i in l:
+    if(len(i)>max):
+        max=len(i)
+        z=l.index(i)
+print(l[z])
+print(max)
+
+op
+3
+sa
+a
+sakshi
+sakshi
+6
+------------------------------------------
+23. Write a Python program to remove the characters which have odd index values of a given string
+str=input()
+txt=''
+for i in range(1,(len(str)+1)):
+    if(i%2==0):
+        txt = txt + str[i-1]
+print(txt)
+
+op
+sakshi
+asi
+
+-----------------------------------------
+24. already present (1st qus)
+-------------------------------------------
+25. i/p-['five plus three','seven minus two','two plus eight minus five','eight divide four']
+o/p ['eight', 'five', 'five', 'four']
+dict={'one':1,'two':2,'three':3,'four':4,'five':5,'six':6,'seven':7,'eight':8,'nine':9,'plus':'+','minus':'-'}
+l=['five plus three']
+li=[]
+l1=[]
+sum=0
+for i in l:
+    k=i.split(' ')
+    li.append(k)
+for i in range(len(li)):
+    sum=0
+    for j in range(len(li[i])):
+        d=str(li[i][j])
+        if(d == 'plus'):
+            continue
+        else:
+            n=dict[d]
+            sum=sum+n
+    print(sum)
+
+op
+8
+-------------------------------------------
+
+26.Convert the string as below.
+input : abcDEwQ
+output: ABCdeWq
+
+input = 'abcDEwQ'
+for i in input:
+    if(i.islower()):
+        print(i.upper(),end='')
+    else:
+        print(i.lower(),end='')
+
+op
+ABCdeWq
+-------------------------------------------
+27.For the below binary number , count the Occurrence of sequence '101'
+10101010100111101
+l='10101010100111101'
+k=l.count('101')
+print(k)
+
+op
+3
+--------------------------------------------
+28. find if the below numbers are Armstrong number.
+# a: 153
+# b:1634
+# c: 876
+n=input()
+length=len(n)
+sum=0
+for i in n:
+    p=int(math.pow(int(i),length))
+    sum=sum+p
+if(sum==int(n)):
+    print('Armstrong number')
+else:
+    print('not armstrong')
+
+op
+153
+Armstrong number
+---------------------------------------------
+29. Find the sum of multiples of 3 and 5 between 1 to 1000.
+sum=0
+for i in range(1,1001):
+    if(i%3==0 and i%5==0):
+        sum=sum+i
+print(sum)
+
+op
+33165
+-----------------------------------------------
+30. sum of number in the below string.
+n=input()
+vow=0
+cons=0
+for i in n:
+    if(i in ['a','e','i','o','u']):
+        vow=vow+1
+    else:
+        cons=cons+1
+print('vowels '+str(vow))
+print('consonants '+str(cons))
+
+op
+fhfjkloiytrewssaxcvgnhjjmkiuy
+vowels 6
+consonants 23
+---------------------------------------------------
+31
+ With a given integral number n, change the program to generate a dictionary that contains (i, cube of i) such that is an integral number
+ between 1 and n (both included). and then the program should print the dictionary
+
+n=int(input())
+dict={}
+for i in range(1,n+1):
+    val=i*i*i
+    dict.update({i:val})
+print(dict)
+
+op
+7
+{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 343}
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

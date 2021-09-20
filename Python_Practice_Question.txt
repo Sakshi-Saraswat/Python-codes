@@ -1,0 +1,131 @@
+1. 
+(a) How to find the maximum occurring character in given String.
+(b) find non repeated char in a string.
+(c) how to remove the duplicate character from String
+(d) How do you count a number of vowels and consonants in a given string
+(e) length of string. (diff methods)
+(f) String Reverse. (diff methods)
+
+2. Write a program that asks the user to input n integers, and then prints the largest odd number that was entered. If no odd number was entered, it should print a message to that effect.
+
+3. Write a program that asks the user to enter an integer and prints two integers, root and pwr, such that 0 < pwr < 6 and root**pwr is equal to the integer entered by the user. If no such pair of integers exists, it should print a message to that effect.
+
+4. Let s be a string that contains a sequence of decimal numbers separated by commas, e.g., s = '1.23,2.4,3.123'. Write a program that prints the sum of the numbers in s.
+
+5. Write a program that accepts two strings as arguments and returns True if either string occurs anywhere in the other, and False otherwise. with and without built-in str operation.
+
+6. The volume of a sphere with radius r is 4/3pr3. What is the volume of a sphere with radius 5?
+
+7. Get first name and last name from user and print your full name. (try diff methods)
+
+8. Get ur full name, age as input from user and print first name and last name , age using string slicing a) 2 raw_input get name and age b) print first name and last name and age c) WHEN age >= 18 , he/she is eligible to vote d) WHEN age < 18 , he/she is not eligible to vote
+
+9. Calculating your birth number in numerology 26/11/1978 2+6+1+1+1+7+8 = 8
+
+10. Write a Python program to perform sum of three given integers. However, if any of the two values are equal then sum will be zero (eg : 2+1+1 = 0)
+
+11. Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters. Suppose the following input is supplied to the program. (with and without built-in function)
+
+Hello world! Then, the output should be: UPPER CASE 1 LOWER CASE 9
+
+12. Write a python script to validate the strong password (combination of characters alphabets and numbers,special characters in it. if not weak password) eg: Acc9876$ it is strong password abcd it is weak password.
+
+13. Please write a program which counts and prints the numbers of each character in a string input by console.
+
+Example: If the following string is given as input to the program:
+
+abcdefgabc
+
+Then, the output of the program should be:
+
+>>>	a,2
+	c,2
+	b,2
+	e,1
+	d,1
+	g,1
+	f,1
+
+Sample String : google.com'
+Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+(try both sample)
+
+14. Write a program that will ask the user for a number and then print out a list of number from 1 to the number entered and the square of the number. For example, if the user entered '3' then the program would output:
+
+1 squared is 1. 2 squared is 4. 3 squared is 9.
+
+15. Create a program which asks the user for 3 numbers representing the year, month and day e.g 1982 10 08 and then outputs in the form 8th October 1982
+
+16. (a) string palindrome
+	(b) number palindrome.
+
+17. string anagram
+
+18. (a) prime or not between range of numbers form user.
+(b) get a number from user and validate prime or not.
+
+19. (a) get input from user and validate even or odd.
+	(b) Sum of even and odd number between a range. get the range from user.
+
+20. Leap year or not.
+
+21. Python comments multiline & single. (see how to use and print doc string)
+
+22. Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+
+23. Write a Python program to remove the characters which have odd index values of a given string
+
+24. # Output:
+# Dictionary format with keys
+# 1.	Length of string
+# 2.	Number of words
+# 3.	Max Occurance
+# 4.	Max Occurance word
+# 5.	Repeated word's count
+# 6.	Repeated word's list
+
+#for the below input
+Hakka and Bukka were brothers and warriors. The brothers wanted to build their own kingdom where people 
+could live without fear. They collected a band of young men and trained them in warfare. They lived in a forest 
+hideout on the banks of the river Tungabhadra in South India. One day, the brothers were out on a hunt. Ferocious 
+dogs accompanied them. They crossed the river and rode on. A couple of frightened rabbits ran out of the bushes. The 
+dogs gave them chase with the two brothers closely behind on their horses. It was a long chase. The rabbits were 
+running for their life. The dogs were catching up. Suddenly, in a swift move, the rabbits turned and faced the dogs. 
+Taken aback by the show of defiance, the barking dogs stepped back. Hakka called back the dogs. As the dogs turned 
+back, the rabbits walked away. Hakka looked around. They were on the other side of the Tungabhadra. It was a rocky 
+land. The sun was blazing in the sky. "Strange! I’ve never seen rabbits challenging dogs before! " said Bukka. 
+"That’s the quality of this land, " said a quiet voice,  "Even rabbits give fight. " Startled to hear a stranger 
+speak, the two brothers turned. They saw a holy man walking towards them. He was a picture of peace. At the same 
+time, his eyes were blazing bright
+
+25. # i/p
+# ['five plus three','seven minus two','two plus eight minus five','eight divide four']
+#
+# o/p ['eight', 'five', 'five', 'four']
+
+26.Convert the string as below.
+# input : abcDEwQ
+# output: ABCdeWq
+
+27.For the below binary number , count the Occurrence of sequence '101'
+# 10101010100111101
+
+28. find if the below numbers are Armstrong number.
+# a: 153
+# b:1634
+# c: 876
+
+29. Find the sum of multiples of 3 and 5 between 1 to 1000.
+
+30. sum of number in the below string.
+"There are 26 alphabets in English out of which 5 are vowels and 21 are consonants".
+
+31. With a given integral number n, change the program to generate a dictionary that contains (i, cube of i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary. Suppose the following input is supplied to the program: 7 Then, the output should be: {1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 373} Take the input from the user via console.
+
+32. Go through all String, list, dict function.
+
+33. Binary search
+
+34. linear search
+
+36. bubble sort
